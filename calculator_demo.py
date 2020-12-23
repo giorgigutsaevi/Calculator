@@ -9,6 +9,7 @@ e = Entry(root, width=30, bg='beige', fg='orange', borderwidth=2, relief='sunken
 e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 
 
+# various functions for our calculator app
 def button_click(number):
     # e.delete(0, END)
     current = e.get()
@@ -69,7 +70,7 @@ def button_equal():
         e.insert(0, f_num / int(second_number))
         
 
-# Designing our Buttons
+# Designing our buttons
 button_1 = Button(root, text='1', padx=40, pady=20, command=lambda: button_click(1))
 button_2 = Button(root, text='2', padx=40, pady=20, command=lambda: button_click(2))
 button_3 = Button(root, text='3', padx=40, pady=20, command=lambda: button_click(3))
@@ -88,7 +89,7 @@ button_multiply = Button(root, text='*', padx=39, pady=20, command=button_multip
 button_divide = Button(root, text='/', padx=39, pady=20, command=button_divide)
 button_equal = Button(root, text='=', padx=92, pady=20, command=button_equal)
 
-# Putting our button on the screen with a .grid system
+# Putting our designed buttons on the screen with a .grid geometry system
 button_1.grid(row=3, column=0)
 button_2.grid(row=3, column=1)
 button_3.grid(row=3, column=2)
